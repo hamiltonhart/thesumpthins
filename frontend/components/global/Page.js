@@ -1,7 +1,11 @@
+import { GlobalStyle } from "../styles/GlobalStyles";
+import Header from "./Header";
+
 export default function Page({ children }) {
   return (
     <div>
-      <h3>Page Component</h3>
+      <GlobalStyle />
+      <Header />
       {children}
     </div>
   );
