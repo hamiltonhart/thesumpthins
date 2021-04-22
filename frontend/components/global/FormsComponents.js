@@ -8,7 +8,9 @@ export function TextInput({
   value,
   setValue,
   textarea,
+  fullWidth,
   rows = 10,
+  type = "text",
 }) {
   return (
     <div>
@@ -22,14 +24,16 @@ export function TextInput({
           placeholder={placeholder}
           onChange={(e) => setValue(e.target.value)}
           rows={rows}
+          fullWidth={fullWidth ? true : false}
         />
       ) : (
         <TextInputStyle
-          type="text"
+          type={type}
           id={htmlFor}
           value={value}
           placeholder={placeholder}
           onChange={(e) => setValue(e.target.value)}
+          fullWidth={fullWidth ? true : false}
         />
       )}
     </div>

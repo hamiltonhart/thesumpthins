@@ -40,7 +40,8 @@ export const GlobalStyle = createGlobalStyle`
       --medSpacing: 1.6rem;
       --lgSpacing: 2rem;
       --xlSpacing: 2.4rem;
-      --xxlSpacing: 3rem;  
+      --xxlSpacing: 3rem;
+      --pageHeader: 4rem;
     ${"" /* Radius */}
     --borderRadius: 10px;
     --buttonRadius: var(--borderRadius);
@@ -64,8 +65,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         padding: 0;
-        margin: left-auto;
-        margin-right: auto;
+        ${"" /* margin: left-auto;
+        margin-right: auto; */}
         font-size: var(--std);
         color: var(--black);
     }

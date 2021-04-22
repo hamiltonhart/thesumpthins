@@ -1,3 +1,4 @@
+import { PrimaryContainer } from "../styles/Containers";
 import { GlobalStyle } from "../styles/GlobalStyles";
 import Header from "./Header";
 
@@ -6,7 +7,7 @@ export default function Page({ children }) {
     <div>
       <GlobalStyle />
       <Header />
-      {children}
+      <PrimaryContainer>{children}</PrimaryContainer>
     </div>
   );
 }

@@ -1,15 +1,14 @@
 import Link from "next/link";
-import { NavBarStyle, NavItemStyle } from "../styles/Nav";
-// import CNLogo from "../../svg/TheCrowsNestCircle.svg";
-// import Circle from "../../svg/Circle.svg";
+import { NavBarStyle } from "../styles/Nav";
+import CNLogo from "../../public/svg/TheCrowsNestCircle.svg";
 
 export default function Nav() {
   return (
     <NavBarStyle>
-      {/* <Link href="/">
-        <img src={Circle} />
-      </Link> */}
       <Link href="/sumpthins">Meet The Sumpthin's</Link>
+      <Link href="/">
+        <img src={CNLogo} />
+      </Link>
       <Link href="/contact">Speak to Mrs Crow</Link>
     </NavBarStyle>
   );

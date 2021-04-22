@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const FormStyle = styled.form``;
+
 export const LabelStyle = styled.label`
   display: ${(props) => (props.display ? props.display : "block")};
   padding: var(--xsSpacing);
@@ -12,6 +14,7 @@ export const TextInputStyle = styled.input`
   padding: var(--smSpacing);
   border-radius: var(--borderRadius);
   font-size: var(--std);
+  min-width: ${(props) => props.fullWidth && "100%"};
   &::placeholder {
     color: var(--grey);
   }
@@ -29,6 +32,7 @@ export const TextAreaStyle = styled.textarea`
   padding: var(--smSpacing);
   border-radius: var(--borderRadius);
   font-size: var(--std);
+  min-width: ${(props) => props.fullWidth && "100%"};
   overflow: scroll;
   resize: none;
   &::placeholder {

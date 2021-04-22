@@ -1,3 +1,9 @@
+import { PageHeadingText } from "../components/styles/Typography";
+
 export default function SumpthinsPage() {
-  return <div>Sumpthin's</div>;
+  return (
+    <>
+      <PageHeadingText>The Sumpthin's</PageHeadingText>
+    </>
+  );
 }
