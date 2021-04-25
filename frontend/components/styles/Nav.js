@@ -18,8 +18,11 @@ export const NavBarStyle = styled.nav`
     color: var(--primary);
   }
   img {
-    width: 300px;
+    width: 500px;
     padding-left: var(--lgSpacing);
     padding-right: var(--lgSpacing);
+    @media (max-width: 900px) {
+      width: 300px;
+    }
   }
 `;

@@ -6,4 +6,15 @@ export const PageHeadingText = styled.h1`
   color: var(--primary);
   font-weight: 600;
   text-transform: uppercase;
+  @media (max-width: 900px) {
+    font-size: var(--xl);
+  }
+`;
+
+export const TextStyle = styled.p`
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "var(--std)")};
+  text-align: ${(props) => (props.textAlign ? props.textAlign : "left")};
+  a {
+    color: var(--primary);
+  }
 `;

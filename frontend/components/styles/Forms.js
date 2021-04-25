@@ -33,7 +33,7 @@ export const TextAreaStyle = styled.textarea`
   border-radius: var(--borderRadius);
   font-size: var(--std);
   min-width: ${(props) => props.fullWidth && "100%"};
-  overflow: scroll;
+  overflow: auto;
   resize: none;
   &::placeholder {
     color: var(--grey);

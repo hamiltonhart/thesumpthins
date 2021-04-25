@@ -1,3 +1,4 @@
+import { FlexContainer } from "../styles/Containers";
 import { LabelStyle, TextAreaStyle, TextInputStyle } from "../styles/Forms";
 
 export function TextInput({
@@ -13,7 +14,7 @@ export function TextInput({
   type = "text",
 }) {
   return (
-    <div>
+    <FlexContainer fullWidth>
       <LabelStyle htmlFor={htmlFor} display={labelDisplay || null}>
         {labelText}
       </LabelStyle>
@@ -36,6 +37,6 @@ export function TextInput({
           fullWidth={fullWidth ? true : false}
         />
       )}
-    </div>
+    </FlexContainer>
   );
 }
