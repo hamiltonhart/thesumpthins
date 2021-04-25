@@ -1,12 +1,11 @@
 {
-  "name": "frontend",
+  "name": "thesumpthins",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "heroku-postbuild": "npm run build"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@apollo/client": "^3.3.15",
