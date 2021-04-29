@@ -1,15 +1,35 @@
 import Link from "next/link";
 import { NavBarStyle } from "../styles/Nav";
-import SumpthinsLogo from "../../public/svg/TheSumpthins_Logo.svg";
+import { Logo } from "./Logo";
+import { useMediaQuery } from "../../utils/useMediaQuery";
 
 export default function Nav() {
+  // useMediaQuery at 900px to put a hamburger menu in the top left that pulls from the top, framer motion for a fun animation, close on the right
+  const hamburger = useMediaQuery(900);
+
   return (
     <NavBarStyle>
-      {/* <Link href="/sumpthins">Meet The Sumpthin's</Link> */}
-      <Link href="/">
-        <img src={SumpthinsLogo} />
-      </Link>
-      {/* <Link href="/contact">Talk to Mrs Crow</Link> */}
+      {!hamburger ? (
+        <>
+          <Link href="/sumpthins">
+            <a className="first">Meet The Sumpthin's</a>
+          </Link>
+          <Logo />
+          <Link href="/contact">
+            <a className="second">Talk To The Sumpthin's</a>
+          </Link>
+        </>
+      ) : (
+        <>
+          {/* <Link href="/sumpthins">
+            <a className="first">Meet The Sumpthin's</a>
+          </Link> */}
+          <Logo />
+          {/* <Link href="/contact">
+            <a className="second">Talk To The Sumpthin's</a>
+          </Link> */}
+        </>
+      )}
     </NavBarStyle>
   );
 }

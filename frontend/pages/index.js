@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { FlexContainer } from "../components/styles/Containers";
 import { PageHeadingText, TextStyle } from "../components/styles/Typography";
 
 export default function HomePage() {
-  const [testInput, setTestInput] = useState("");
   return (
     <>
       <FlexContainer justifyContent="center">
