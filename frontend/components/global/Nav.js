@@ -29,7 +29,7 @@ export default function Nav() {
           <MenuIcon onClick={() => setOpen(true)} />
           {open && (
             <HamburgerStyle>
-              <CloseIcon onClick={() => setOpen(false)} />
+              <CloseIcon onClick={() => setOpen(false)} noBG width="40px" />
               <Link href="/sumpthins">
                 <a className="first">Meet The Sumpthin's</a>
               </Link>

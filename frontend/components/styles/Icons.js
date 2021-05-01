@@ -8,9 +8,10 @@ export const IconStyle = styled.button`
   background-color: transparent;
   padding: var(--smSpacing);
   img {
-    width: 30px;
+    width: ${(props) => (props.width ? props.width : "30px")};
   }
   :hover {
-    background-color: var(--secondaryExtraLight);
+    background-color: ${(props) =>
+      props.noBG ? "transparent" : "var(--secondaryExtraLight)"};
   }
 `;

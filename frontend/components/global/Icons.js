@@ -2,18 +2,18 @@ import { IconStyle } from "../styles/Icons";
 import MenuIconSVG from "../../public/svg/icon-menu.svg";
 import CloseIconSVG from "../../public/svg/icon-close.svg";
 
-export const MenuIcon = ({ onClick }) => {
+export const MenuIcon = (props) => {
   return (
-    <IconStyle onClick={onClick}>
+    <IconStyle onClick={props.onClick} {...props}>
       <img src={MenuIconSVG} alt="Open Menu" />
     </IconStyle>
   );
 };
 
-export const CloseIcon = ({ onClick }) => {
+export const CloseIcon = (props) => {
   return (
-    <IconStyle onClick={onClick}>
-      <img src={CloseIconSVG} alt="Close Menu" />
+    <IconStyle onClick={props.onClick} {...props}>
+      <img src={CloseIconSVG} width="200px" alt="Close Menu" />
     </IconStyle>
   );
 };
