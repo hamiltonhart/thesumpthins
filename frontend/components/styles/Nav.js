@@ -51,12 +51,16 @@ export const HamburgerStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 90vw;
   height: 100%;
   background-color: var(--secondary);
+  padding: var(--lgSpacing);
+  border-top-right-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
   a {
-    font-size: var(--med);
+    text-align: left;
+    font-size: var(--lg);
     margin-top: var(--medSpacing);
     margin-bottom: var(--medSpacing);
     border: none;
