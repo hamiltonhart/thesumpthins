@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NavBarStyle } from "../styles/Nav";
+import { HamburgerStyle, NavBarStyle } from "../styles/Nav";
 import { Logo } from "./Logo";
 import { useMediaQuery } from "../../utils/useMediaQuery";
 
@@ -28,6 +28,15 @@ export default function Nav() {
           {/* <Link href="/contact">
             <a className="second">Talk To The Sumpthin's</a>
           </Link> */}
+          <HamburgerStyle>
+            <Link href="/sumpthins">
+              <a className="first">Meet The Sumpthin's</a>
+            </Link>
+
+            <Link href="/contact">
+              <a className="second">Talk To The Sumpthin's</a>
+            </Link>
+          </HamburgerStyle>
         </>
       )}
     </NavBarStyle>

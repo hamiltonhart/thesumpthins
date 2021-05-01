@@ -43,3 +43,23 @@ export const NavBarStyle = styled.nav`
     }
   }
 `;
+
+export const HamburgerStyle = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 100%;
+  background-color: var(--secondary);
+  a {
+    font-size: var(--med);
+    margin-top: var(--medSpacing);
+    margin-bottom: var(--medSpacing);
+    border: none;
+    color: var(--black);
+  }
+`;
