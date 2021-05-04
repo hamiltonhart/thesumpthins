@@ -18,6 +18,10 @@ pids
 .nyc_output
 coverage
 
+# Env Variables
+.env
+.env.local
+
 # test output
 test/**/out*
 test/**/next-env.d.ts

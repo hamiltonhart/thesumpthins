@@ -5,6 +5,7 @@ const ButtonBase = styled.button`
   text-transform: uppercase;
   font-size: var(--std);
   box-shadow: var(--stdHeight);
+  ${(props) => props.disabled && "background-color: var(--darkGrey);"}
 `;
 
 export const PrimaryButton = styled(ButtonBase)`

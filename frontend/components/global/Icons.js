@@ -13,7 +13,7 @@ export const MenuIcon = (props) => {
 export const CloseIcon = (props) => {
   return (
     <IconStyle onClick={props.onClick} {...props}>
-      <img src={CloseIconSVG} width="200px" alt="Close Menu" />
+      <img src={CloseIconSVG} alt="Close Menu" />
     </IconStyle>
   );
 };

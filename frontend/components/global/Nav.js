@@ -11,6 +11,10 @@ export default function Nav() {
   // useMediaQuery at 900px to put a hamburger menu in the top left that pulls from the top, framer motion for a fun animation, close on the right
   const hamburger = useMediaQuery(900);
 
+  const handleLinkClick = () => {
+    setOpen(false);
+  };
+
   return (
     <NavBarStyle>
       {!hamburger ? (
@@ -31,11 +35,15 @@ export default function Nav() {
             <HamburgerStyle>
               <CloseIcon onClick={() => setOpen(false)} noBG width="40px" />
               <Link href="/sumpthins">
-                <a className="first">Meet The Sumpthin's</a>
+                <a className="first" onClick={handleLinkClick}>
+                  Meet The Sumpthin's
+                </a>
               </Link>
 
               <Link href="/contact">
-                <a className="second">Talk To The Sumpthin's</a>
+                <a className="second" onClick={handleLinkClick}>
+                  Talk To The Sumpthin's
+                </a>
               </Link>
             </HamburgerStyle>
           )}
