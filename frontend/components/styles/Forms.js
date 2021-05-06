@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const FormStyle = styled.form``;
+export const FormStyle = styled.form`
+  min-width: 100%;
+`;
 
 export const LabelStyle = styled.label`
   display: ${(props) => (props.display ? props.display : "block")};

@@ -42,7 +42,7 @@ export default function Nav() {
 
               <Link href="/contact">
                 <a className="second" onClick={handleLinkClick}>
-                  Talk To The Sumpthin's
+                  Send A Message
                 </a>
               </Link>
             </HamburgerStyle>

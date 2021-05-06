@@ -1,4 +1,4 @@
-import { PrimaryContainer } from "../styles/Containers";
+import { BodyContainer, MainContainer } from "../styles/Containers";
 import { GlobalStyle } from "../styles/GlobalStyles";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -6,12 +6,12 @@ import Footer from "./Footer";
 export default function Page({ children }) {
   return (
     <>
-      <div style={{ position: "relative" }}>
+      <MainContainer>
         <GlobalStyle />
         <Header />
-        <PrimaryContainer>{children}</PrimaryContainer>
+        <BodyContainer>{children}</BodyContainer>
         <Footer>Footer Text</Footer>
-      </div>
+      </MainContainer>
     </>
   );
 }

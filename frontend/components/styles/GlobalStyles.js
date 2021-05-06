@@ -62,16 +62,26 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
     }
 
+    html {
+      min-height: 100%;
+    }
+
     body {
         font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding: 0;
-        ${"" /* margin: left-auto;
-        margin-right: auto; */}
+        display: flex;
+        flex-direction: column;
         font-size: var(--std);
         color: var(--black);
         margin-top: 0;
         margin-bottom: 0;
-        height: 100%;
+        padding: 0;
+        min-height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body > div {
+      min-height: 100%;
     }
 
     a,

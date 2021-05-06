@@ -41,7 +41,7 @@ export const ContactForm = () => {
     });
   };
   return (
-    <FlexContainer padding="var(--smSpacing) var(--smSpacing)">
+    <FlexContainer padding="var(--smSpacing) var(--smSpacing)" fullWidth>
       {submitted && (
         <FormSubmitted
           message="Message Sent!"

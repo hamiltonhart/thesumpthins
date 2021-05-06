@@ -1,22 +1,33 @@
 import styled from "styled-components";
 
-export const PrimaryContainer = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 `;
 
+export const BodyContainer = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  min-width: 50vw;
+  margin-bottom: var(--xxlSpacing);
+  @media (max-width: 900px) {
+    min-width: 100vw;
+  }
+  /* display: flex;
+  flex-direction: column;
+  min-height: 100vh; */
+`;
+
 export const FooterStyle = styled.footer`
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   height: 100px;
   width: 100%;
-  margin-top: var(--lgSpacing);
+  margin-top: auto;
   background-color: var(--primaryLight);
   padding: var(--lgSpacing);
 `;
