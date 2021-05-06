@@ -10,7 +10,7 @@ export default function Page({ children }) {
         <GlobalStyle />
         <Header />
         <BodyContainer>{children}</BodyContainer>
-        <Footer>Footer Text</Footer>
+        <Footer />
       </MainContainer>
     </>
   );
