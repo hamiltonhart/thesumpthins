@@ -4,12 +4,14 @@ import { TextInput } from "../global/FormsComponents";
 import { PrimaryButton } from "../styles/Buttons";
 import { FlexContainer } from "../styles/Containers";
 import { FormStyle } from "../styles/Forms";
+import { FormSubmitted } from "./FormSubmitted";
 
 export const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const mobile = useMediaQuery(900);
@@ -17,6 +19,7 @@ export const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = { name, email, subject, message };
+    setSubmitting(true);
 
     fetch("/api/contact", {
       method: "POST",
@@ -26,19 +29,28 @@ export const ContactForm = () => {
       },
       body: JSON.stringify(formData),
     }).then((res) => {
-      console.log("Response received");
       if (res.status === 200) {
-        console.log("Response succeeded!");
+        setSubmitting(false);
         setSubmitted(true);
         setName("");
         setEmail("");
         setSubject("");
         setMessage("");
+        window.scrollTo(0, 0);
       }
     });
   };
   return (
     <FlexContainer padding="var(--smSpacing) var(--smSpacing)">
+      {submitted && (
+        <FormSubmitted
+          message="Message Sent!"
+          center
+          uppercase
+          size="var(--xl)"
+          color="var(--secondary)"
+        />
+      )}
       <FormStyle onSubmit={(e) => handleSubmit(e)}>
         <FlexContainer
           flexDirection={mobile ? "column" : "row"}
@@ -97,8 +109,10 @@ export const ContactForm = () => {
           <PrimaryButton
             as="input"
             type="submit"
-            value="Send Message"
-            disabled={!!!name || !!!email || !!!subject || !!!message}
+            value={submitting ? "Sending..." : "Send Message"}
+            disabled={
+              !!!name || !!!email || !!!subject || !!!message | !!submitting
+            }
           />
         </FlexContainer>
       </FormStyle>

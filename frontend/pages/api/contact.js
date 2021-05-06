@@ -1,17 +1,39 @@
 export default async function (req, res) {
   const nodemailer = require("nodemailer");
+  const { google } = require("googleapis");
+  const OAuth2 = google.auth.OAuth2;
+
+  const oauth2Client = new OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    "https://developers.google.com/oauthplayground"
+  );
+
+  oauth2Client.setCredentials({
+    refresh_token: process.env.REFRESH_TOKEN,
+  });
+
+  const accessToken = await new Promise((resolve, reject) => {
+    oauth2Client.getAccessToken((err, token) => {
+      if (err) {
+        reject("Failed to create access token :(");
+      }
+      resolve(token);
+    });
+  });
 
   const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
-    secure: true,
+    service: "gmail",
     auth: {
+      type: "OAuth2",
       user: process.env.EMAIL_ADDRESS,
-      pass: process.env.EMAIL_PASSWORD,
+      accessToken,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      refreshToken: process.env.REFRESH_TOKEN,
     },
   });
 
-  console.log("----Transporter", transporter);
   try {
     const info = await transporter.sendMail({
       from: `<${req.body.email}>${req.body.name}`,
@@ -22,14 +44,14 @@ export default async function (req, res) {
       ${req.body.message}`,
       html: `
         <div>
-          <h1 style="text-align: center;">${req.body.name}</h1>
-          <h3 style="text-align: center;">${req.body.email}</h3>
-          <p>${req.body.message}</p>
+          <h1>${req.body.name}</h1>
+          <h3>${req.body.email}</h3>
+          <p style="white-space: pre-line;">${req.body.message}</p>
         </div>
       `,
     });
   } catch (err) {
-    console.log("----Transporter Error----", err);
+    console.log("----Transporter Error----  ", err);
   }
 
   res.status(200).json(req.body);

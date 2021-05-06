@@ -69,6 +69,9 @@ export const GlobalStyle = createGlobalStyle`
         margin-right: auto; */}
         font-size: var(--std);
         color: var(--black);
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 100%;
     }
 
     a,

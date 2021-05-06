@@ -24,7 +24,7 @@ export default function Nav() {
           </Link>
           <Logo />
           <Link href="/contact">
-            <a className="second">Talk To The Sumpthin's</a>
+            <a className="second">Send A Message</a>
           </Link>
         </>
       ) : (
