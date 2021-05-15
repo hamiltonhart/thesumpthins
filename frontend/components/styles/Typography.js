@@ -17,6 +17,7 @@ export const TextStyle = styled.p`
   text-transform: ${(props) =>
     props.textTransform ? props.textTransform : "inherit"};
   color: ${(props) => (props.color ? props.color : "black")};
+  ${(props) => props.padding && `padding: ${props.padding};`}
   a {
     color: var(--primary);
   }
