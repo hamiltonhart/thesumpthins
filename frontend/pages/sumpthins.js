@@ -10,7 +10,6 @@ export default function SumpthinsPage(props) {
       <Head>
         <title>The Sumpthin's | About</title>
       </Head>
-      {console.log(props)}
       <PageHeadingText>Who Are The Sumpthin's?</PageHeadingText>
       {/* <FlexContainer>
         {Object.keys(props).map((key, index) => (

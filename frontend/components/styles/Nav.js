@@ -32,14 +32,15 @@ export const NavBarStyle = styled.nav`
     }
   }
   @media (max-width: 900px) {
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: var(--smSpacing);
     .first {
       grid-row: 2;
-      grid-column: 2 / span 2;
+      grid-column: 1 / span 2;
     }
     .second {
       grid-row: 2;
-      grid-column: 4 / span 2;
+      grid-column: 3 / span 2;
     }
   }
 `;
