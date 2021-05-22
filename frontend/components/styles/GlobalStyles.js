@@ -52,6 +52,31 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 10px;
   }
 
+  @font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  @font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Medium-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+  @font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Bold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+  @font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
   *, *:before, *:after {
         box-sizing: border-box;
         margin: 0;
@@ -67,7 +92,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         display: flex;
         flex-direction: column;
         font-size: var(--std);
