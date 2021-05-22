@@ -8,8 +8,8 @@ export default function ContactPage() {
       <Head>
         <title>The Sumpthin's | Contact</title>
       </Head>
-      <PageHeadingText>What's on your mind?</PageHeadingText>
-      <ContactForm />
+      <PageHeadingText>Coming Soon</PageHeadingText>
+      {/* <ContactForm /> */}
     </>
   );
 }
