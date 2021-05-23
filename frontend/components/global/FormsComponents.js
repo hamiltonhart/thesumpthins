@@ -14,7 +14,7 @@ export function TextInput({
   type = "text",
 }) {
   return (
-    <FlexContainer fullWidth>
+    <FlexContainer fullWidth={fullWidth ? true : false} justifyContent="center">
       <LabelStyle htmlFor={htmlFor} display={labelDisplay || null}>
         {labelText}
       </LabelStyle>

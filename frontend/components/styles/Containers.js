@@ -39,7 +39,7 @@ export const FlexContainer = styled.div`
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : "normal"};
   padding: ${(props) => (props.padding ? props.padding : "var(--smSpacing)")};
-  ${(props) => props.fullWidth && "width: 100%"}
+  ${(props) => props.fullWidth && "width: 100%;"}
 
   p {
     ${(props) => props.blockContent && "font-size: var(--med)"}

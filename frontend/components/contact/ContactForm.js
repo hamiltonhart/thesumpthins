@@ -56,6 +56,7 @@ export const ContactForm = () => {
         <FlexContainer
           flexDirection={mobile ? "column" : "row"}
           fullWidth
+          justifyContent="center"
           padding="0px var(--smSpacing)"
         >
           <TextInput
