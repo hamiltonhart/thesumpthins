@@ -51,6 +51,7 @@ export const ContactForm = () => {
           color="var(--secondary)"
         />
       )}
+
       <FormStyle onSubmit={(e) => handleSubmit(e)}>
         <FlexContainer
           flexDirection={mobile ? "column" : "row"}
