@@ -40,7 +40,7 @@ export default function HomePage(props) {
               Keep up with The Sumpthin's!
             </TextStyle>
             <a
-              href="https://www.youtube.com/watch?v=IfxPGxt9MD8"
+              href="https://www.youtube.com/channel/UCKKsYVyFLsAprKt3pTHIiHQ"
               target="_window"
               style={{ textAlign: "center" }}
             >
