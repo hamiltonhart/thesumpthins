@@ -17,15 +17,17 @@ export default function HomePage(props) {
           <Motto />
         </FlexContainer>
         <FlexContainer
+          className="block-content easy-reading"
           blockContent
-          padding="calc(var(--xxlSpacing) * 2) calc(var(--xxlSpacing) * 2) 0 calc(var(--xxlSpacing) * 2)"
+          margin="0 auto"
+          padding="var(--xxlSpacing) var(--xxlSpacing) 0"
         >
           <BlockContent blocks={props[0].text} />
         </FlexContainer>
         <FlexContainer
           flexDirection="row"
           justifyContent="center"
-          padding="var(--xxlSpacing)"
+          padding="var(--xxlSpacing) 0"
         >
           <FlexContainer
             flexDirection="column"
@@ -34,15 +36,19 @@ export default function HomePage(props) {
           >
             <TextStyle
               padding="var(--xlSpacing) var(--xlSpacing) 0 var(--xlSpacing)"
-              fontSize="var(--lg)"
+              fontSize="var(--med)"
               textAlign="center"
+              textTransform="uppercase"
+              letterSpacing=".3rem"
+              color="var(--primary)"
+              fontWeight="bold"
             >
               Keep up with The Sumpthin's!
             </TextStyle>
             <a
               href="https://www.youtube.com/channel/UCKKsYVyFLsAprKt3pTHIiHQ"
-              target="_window"
-              style={{ textAlign: "center" }}
+              target="_blank"
+              style={{ textAlign: "center", marginTop: "-2rem" }}
             >
               <img src={YouTubeLogo} alt="YouTube" width="200px" />
             </a>

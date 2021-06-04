@@ -10,14 +10,11 @@ export const BodyContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
-  min-width: 50vw;
+  min-width: 100vw;
   margin-bottom: var(--xxlSpacing);
-  @media (max-width: 900px) {
-    min-width: 100vw;
+  @media (min-width: 900px) {
+    min-width: 50vw;
   }
-  /* display: flex;
-  flex-direction: column;
-  min-height: 100vh; */
 `;
 
 export const FooterStyle = styled.footer`
@@ -39,6 +36,7 @@ export const FlexContainer = styled.div`
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : "normal"};
   padding: ${(props) => (props.padding ? props.padding : "var(--smSpacing)")};
+  margin: ${(props) => (props.margin ? props.margin : "inherit")};
   ${(props) => props.fullWidth && "width: 100%;"}
 
   p {

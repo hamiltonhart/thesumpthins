@@ -142,4 +142,12 @@ export const GlobalStyle = createGlobalStyle`
     p {
       font-size: var(--std);
     }
+
+    .block-content {
+      line-height: 3rem;
+    }
+
+    .easy-reading {
+      max-width: 75ch;
+    }
 `;

@@ -18,7 +18,13 @@ export const TextStyle = styled.p`
     props.textTransform ? props.textTransform : "inherit"};
   color: ${(props) => (props.color ? props.color : "black")};
   ${(props) => props.padding && `padding: ${props.padding};`}
+  letter-spacing: ${(props) =>
+    props.letterSpacing ? props.letterSpacing : "inherit"};
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "inherit")};
   a {
     color: var(--primary);
+  }
+  .block-content * {
+    line-height: 3rem;
   }
 `;
