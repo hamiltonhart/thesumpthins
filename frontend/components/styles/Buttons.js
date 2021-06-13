@@ -26,3 +26,10 @@ export const PrimaryButtonNoBG = styled(PrimaryButton)`
   box-shadow: none;
   color: var(--primaryDark);
 `;
+
+export const IconButton = styled.button`
+  border-radius: 50%;
+  img {
+    width: var(--iconSize);
+  }
+`;

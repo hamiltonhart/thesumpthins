@@ -24,7 +24,4 @@ export const TextStyle = styled.p`
   a {
     color: var(--primary);
   }
-  .block-content * {
-    line-height: 3rem;
-  }
 `;

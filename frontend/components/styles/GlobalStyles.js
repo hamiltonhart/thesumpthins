@@ -49,6 +49,8 @@ export const GlobalStyle = createGlobalStyle`
     ${"" /* Box Shadow */}
     --stdHeight: 2px 3px 4px 1px rgba(0, 0, 0, 0.25);
 
+    --iconSize: 80px;
+
     font-size: 10px;
   }
 
@@ -85,6 +87,10 @@ export const GlobalStyle = createGlobalStyle`
 
     *:focus {
         outline: none;
+    }
+
+    ul, ol {
+      list-style-type: none;
     }
 
     html {

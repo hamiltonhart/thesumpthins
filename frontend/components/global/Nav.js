@@ -1,84 +1,38 @@
-// import { useState, useEffect } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import { HamburgerStyle, NavBarStyle } from "../styles/Nav";
 import { Logo } from "./Logo";
-// import { useMediaQuery } from "../../utils/useMediaQuery";
-// import { CloseIcon, MenuIcon } from "./Icons";
+import { CloseIcon, MenuIcon } from "./Icons";
 
 export default function Nav() {
-  // const [open, setOpen] = useState(false);
+  const menuRef = useRef();
 
-  // useMediaQuery at 900px to put a hamburger menu in the top left that pulls from the top, framer motion for a fun animation, close on the right
-  // const hamburger = useMediaQuery(900);
+  const handleMenuClick = () => {
+    menuRef.current.classList.add("show-menu");
+  };
 
-  // const handleLinkClick = () => {
-  //   setOpen(false);
-  // };
+  const handleMenuClose = () => {
+    menuRef.current.classList.remove("show-menu");
+  };
 
   return (
     <>
-      {/* <NavBarStyle className="mobile">
-        <Logo />
-        <MenuIcon onClick={() => setOpen(true)} />
-        {open && (
-          <HamburgerStyle>
-            <CloseIcon onClick={() => setOpen(false)} noBG width="40px" />
-            <Link href="/sumpthins">
-              <a className="first" onClick={handleLinkClick}>
-                Meet The Sumpthin's
-              </a>
-            </Link>
-
-            <Link href="/contact">
-              <a className="second" onClick={handleLinkClick}>
-                Send A Message
-              </a>
-            </Link>
-          </HamburgerStyle>
-        )}
-      </NavBarStyle> */}
       <NavBarStyle>
-        <Link href="/sumpthins">
-          <a className="first">Meet The Sumpthin's</a>
-        </Link>
+        <MenuIcon onClick={(e) => handleMenuClick(e)} />
         <Logo />
-        <Link href="/contact">
-          <a className="second">Send A Message</a>
-        </Link>
-
-        {/* <NavBarStyle>
-      {!hamburger ? (
-        <>
-          <Link href="/sumpthins">
-            <a className="first">Meet The Sumpthin's</a>
-          </Link>
-          <Logo />
-          <Link href="/contact">
-            <a className="second">Send A Message</a>
-          </Link>
-        </>
-      ) : (
-        <>
-          <Logo />
-          <MenuIcon onClick={() => setOpen(true)} />
-          {open && (
-            <HamburgerStyle>
-              <CloseIcon onClick={() => setOpen(false)} noBG width="40px" />
-              <Link href="/sumpthins">
-                <a className="first" onClick={handleLinkClick}>
-                  Meet The Sumpthin's
-                </a>
-              </Link>
-
-              <Link href="/contact">
-                <a className="second" onClick={handleLinkClick}>
-                  Send A Message
-                </a>
-              </Link>
-            </HamburgerStyle>
-          )}
-        </>
-      )} */}
+        <ul id="nav-bar-id" className="nav-bar" ref={menuRef}>
+          <CloseIcon onClick={(e) => handleMenuClose(e)} />
+          <li className="first" onClick={(e) => handleMenuClose(e)}>
+            <Link href="/sumpthins">
+              <a>Meet The Sumpthin's</a>
+            </Link>
+          </li>
+          <li className="second" onClick={(e) => handleMenuClose(e)}>
+            <Link href="/contact">
+              <a>Send A Message</a>
+            </Link>
+          </li>
+        </ul>
       </NavBarStyle>
     </>
   );
