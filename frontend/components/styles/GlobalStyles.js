@@ -51,6 +51,8 @@ export const GlobalStyle = createGlobalStyle`
 
     --iconSize: 80px;
 
+    --desktopBreak: 900px;
+
     font-size: 10px;
   }
 

@@ -70,6 +70,10 @@ export const NavBarStyle = styled.nav`
       transform: translate3d(0, 0, 0);
     }
 
+    .logo-desktop {
+      display: none;
+    }
+
     li {
       padding-bottom: 2rem;
     }
@@ -81,6 +85,55 @@ export const NavBarStyle = styled.nav`
 
       &:hover {
         font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (min-width: 940px) {
+    .logo-mobile {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+    .nav-bar {
+      position: unset;
+      display: grid;
+      grid-template-columns: auto 2fr 1fr 2fr auto;
+      align-items: center;
+      justify-content: center;
+      transform: unset;
+      padding: unset;
+      background-color: unset;
+      .logo-desktop {
+        display: block;
+        grid-column: 3;
+        text-align: center;
+      }
+      .first,
+      .second {
+        text-align: center;
+        a {
+          color: var(--black);
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          padding: 1.5rem;
+          border-top: 2px solid black;
+          border-bottom: 2px solid black;
+          &:hover {
+            color: var(--primary);
+            border-top: 2px solid var(--primary);
+            border-bottom: 2px solid var(--primary);
+            font-weight: unset;
+          }
+        }
+      }
+      .first {
+        grid-column: 2;
+      }
+      .second {
+        grid-column: 4;
       }
     }
   }

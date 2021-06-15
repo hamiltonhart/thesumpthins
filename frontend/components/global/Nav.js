@@ -19,13 +19,18 @@ export default function Nav() {
     <>
       <NavBarStyle>
         <MenuIcon onClick={(e) => handleMenuClick(e)} />
-        <Logo />
-        <ul id="nav-bar-id" className="nav-bar" ref={menuRef}>
+        <span className="logo-mobile">
+          <Logo />
+        </span>
+        <ul className="nav-bar" ref={menuRef}>
           <CloseIcon onClick={(e) => handleMenuClose(e)} />
           <li className="first" onClick={(e) => handleMenuClose(e)}>
             <Link href="/sumpthins">
               <a>Meet The Sumpthin's</a>
             </Link>
+          </li>
+          <li className="logo-desktop">
+            <Logo />
           </li>
           <li className="second" onClick={(e) => handleMenuClose(e)}>
             <Link href="/contact">
