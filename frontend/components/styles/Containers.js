@@ -9,11 +9,12 @@ export const MainContainer = styled.div`
 export const BodyContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
   min-width: 100vw;
   margin-bottom: var(--xxlSpacing);
-  @media (min-width: 900px) {
-    min-width: 50vw;
+  @media (min-width: 940px) {
+    max-width: 1200px;
+    min-width: 900px;
+    width: 100%;
   }
 `;
 
@@ -42,4 +43,28 @@ export const FlexContainer = styled.div`
   p {
     ${(props) => props.blockContent && "font-size: var(--med)"}
   }
+`;
+
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: ${(props) => (props.columns ? props.columns : "auto")};
+  grid-template-rows: ${(props) => (props.rows ? props.rows : "auto")};
+  grid-gap: ${(props) => (props.gap ? props.gap : "var(--xsSpacing)")};
+  padding: ${(props) => (props.padding ? props.padding : "var(--smSpacing)")};
+  margin: ${(props) => (props.margin ? props.margin : "inherit")};
+  ${(props) => props.fullWidth && "width: 100%;"}
+`;
+
+export const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(207, 207, 207, 0.8);
+  width: 100vw;
+  height: 100vh;
+  padding-left: var(--medSpacing);
+  padding-right: var(--medSpacing);
 `;

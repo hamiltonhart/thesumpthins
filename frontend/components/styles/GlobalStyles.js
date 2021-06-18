@@ -158,4 +158,32 @@ export const GlobalStyle = createGlobalStyle`
     .easy-reading {
       max-width: 75ch;
     }
+
+    .modal-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 800;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(207, 207, 207, 0.8);
+      width: 100vw;
+      height: 100vh;
+      padding-left: var(--medSpacing);
+      padding-right: var(--medSpacing);
+      opacity: 0;
+      transition: opacity 250ms ease-in-out;
+    }
+
+    .show-modal {
+      display: flex;
+      opacity: 1;
+    }
+
+    ${"" /* Keyframes */}
+    @keyframes sumpthin-detail {
+      from {opacity: 0; transform: translate3d(0, -50px, 0);}
+      to {opacity: 1; transform: translate3d(0, 0, 0);}
+    }
 `;
