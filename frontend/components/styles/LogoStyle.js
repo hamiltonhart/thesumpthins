@@ -8,7 +8,7 @@ export const LogoStyle = styled.img`
   @media (min-width: 1460px) {
     width: 300px;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 940px) {
     grid-column: 3 / span 2;
   }
 `;

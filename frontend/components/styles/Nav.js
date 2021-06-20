@@ -60,6 +60,7 @@ export const NavBarStyle = styled.nav`
     right: 0;
     width: 85%;
     height: 100%;
+    z-index: 700;
     background-color: var(--primaryLight);
     padding: calc(var(--xxlSpacing) * 3) 0 0 var(--xlSpacing);
     transform: translate3d(100%, 0, 0);

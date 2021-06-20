@@ -5,6 +5,7 @@ const ButtonBase = styled.button`
   text-transform: uppercase;
   font-size: var(--std);
   box-shadow: var(--stdHeight);
+  cursor: pointer;
   ${(props) => props.disabled && "background-color: var(--darkGrey);"}
 `;
 
@@ -24,7 +25,7 @@ export const PrimaryButtonLight = styled(PrimaryButton)`
 export const PrimaryButtonNoBG = styled(PrimaryButton)`
   background-color: transparent;
   box-shadow: none;
-  color: var(--primaryDark);
+  color: ${(props) => (props.color ? props.color : "var(--primaryDark)")};
 `;
 
 export const IconButton = styled.button`
