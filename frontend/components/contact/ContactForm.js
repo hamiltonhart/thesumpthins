@@ -13,6 +13,7 @@ export const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   const mobile = useMediaQuery(900);
 
@@ -31,12 +32,16 @@ export const ContactForm = () => {
     }).then((res) => {
       if (res.status === 200) {
         setSubmitting(false);
+        setFailed(false);
         setSubmitted(true);
         setName("");
         setEmail("");
         setSubject("");
         setMessage("");
         window.scrollTo(0, 0);
+      } else {
+        setSubmitting(false);
+        setFailed(true);
       }
     });
   };
@@ -49,6 +54,15 @@ export const ContactForm = () => {
           uppercase
           size="var(--xl)"
           color="var(--secondary)"
+        />
+      )}
+      {failed && (
+        <FormSubmitted
+          message="Something went wrong. You can send an email directly to thesumpthins@gmail.com."
+          center
+          uppercase
+          size="var(--xl)"
+          color="red"
         />
       )}
 

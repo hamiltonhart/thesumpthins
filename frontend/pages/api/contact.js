@@ -25,10 +25,9 @@ export default async function (req, res) {
         </div>
       `,
     });
+    res.status(200).json(req.body);
   } catch (err) {
     console.log("----Transporter Error----  ", err);
-    failed = true;
+    res.status(500).json(req.body);
   }
-
-  res.status(200).json(req.body);
 }
