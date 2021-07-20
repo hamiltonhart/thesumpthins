@@ -11,6 +11,10 @@ export default function HomePage(props) {
     <>
       <Head>
         <title>The Sumpthin's | Home</title>
+        <meta
+          name="description"
+          content="Join Mrs. Crow and her group of Sumpthin's as they discuss life lessons, read stories and generally have fun for kids and parents alike."
+        />
       </Head>
       <FlexContainer justifyContent="center" padding="0">
         <FlexContainer flexDirection="row" justifyContent="center" padding="0">
