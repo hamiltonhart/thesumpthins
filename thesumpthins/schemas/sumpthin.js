@@ -1,6 +1,6 @@
 export default {
   name: "sumpthin",
-  title: "Sumpthin",
+  title: "Sumpthins",
   type: "document",
   fields: [
     {
@@ -16,6 +16,8 @@ export default {
     {
       name: "story",
       title: "Story",
+      description:
+        "What's the story with this Sumpthin? What's their background? What's special about them?",
       type: "blockContent",
     },
   ],
