@@ -21,11 +21,11 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    // post,
     textItem,
-    mainImage,
     sumpthin,
+    post,
     book,
+    mainImage,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

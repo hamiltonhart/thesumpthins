@@ -15,7 +15,6 @@ export default {
     {
       name: "text",
       title: "Text",
-      description: "Text only. No pictures.",
       type: "blockContent",
     },
   ],

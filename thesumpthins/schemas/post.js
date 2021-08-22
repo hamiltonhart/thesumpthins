@@ -1,6 +1,6 @@
 export default {
   name: "post",
-  title: "Post",
+  title: "Blog",
   type: "document",
   fields: [
     {
@@ -11,6 +11,7 @@ export default {
     {
       name: "slug",
       title: "Slug",
+      description: "Click Generate.",
       type: "slug",
       options: {
         source: "title",
@@ -18,17 +19,22 @@ export default {
       },
     },
     {
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
+      name: "postImage",
+      title: "Picture",
+      type: "mainImage",
+      description:
+        "Optional. If there is a picture that goes well with this post, put it here.",
       options: {
         hotspot: true,
       },
     },
     {
-      name: "publishedAt",
-      title: "Published at",
+      name: "date",
+      title: "Date",
       type: "datetime",
+      description:
+        "So people know when you posted this! Quick tip: use the date picker on the right and select 'Set to current time'.",
+      options: {},
     },
     {
       name: "body",
