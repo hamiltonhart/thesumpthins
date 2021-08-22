@@ -10,6 +10,7 @@ import textItem from "./textItem";
 import mainImage from "./mainImage";
 import sumpthin from "./sumpthin";
 import post from "./post";
+import book from "./book";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +25,7 @@ export default createSchema({
     textItem,
     mainImage,
     sumpthin,
+    book,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

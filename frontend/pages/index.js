@@ -64,7 +64,5 @@ export default function HomePage(props) {
 }
 
 HomePage.getInitialProps = async function (context) {
-  return await client.fetch(
-    `*[_type == "textItem" && textTitle == "Main Page Text"]`
-  );
+  return await client.fetch(`*[_type == "textItem" && textTitle == "Welcome"]`);
 };
