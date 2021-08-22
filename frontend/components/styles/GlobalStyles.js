@@ -159,6 +159,10 @@ export const GlobalStyle = createGlobalStyle`
       max-width: 75ch;
     }
 
+    .easy-reading p {
+      margin-bottom: var(--lgSpacing);
+    }
+
     .modal-container {
       position: fixed;
       top: 0;
